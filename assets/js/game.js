@@ -3,6 +3,22 @@ var largura = 0
 var vidas = 0
 var tempo = 10
 
+var criaMoscaTempo = 1500
+
+var nivel = window.location.search
+nivel = nivel.replace('?', '')
+
+if (nivel === 'normal'){
+    //tempo de aparecimento randômico 1500
+    var criaMoscaTempo = 1500
+} else if (nivel === 'dificil') {
+    //tempo de aparecimento randômico 1000
+    var criaMoscaTempo = 1000
+} else if (nivel === 'lendario') {
+    //tempo de aparecimento randômico 750
+    var criaMoscaTempo = 750
+}
+
 function ajustaTamanhoPalcoJogo(){
     altura = window.innerHeight
     largura = window.innerWidth
